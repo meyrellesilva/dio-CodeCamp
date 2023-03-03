@@ -1,0 +1,12 @@
+//Desafios JavaScript na DIO têm funções "gets" e "print" acessíveis globalmente:
+//- "gets" : lê UMA linha com dado(s) de entrada (inputs) do usuário;
+//- "print": imprime um texto de saída (output), pulando linha.
+
+const nome = gets();
+const sobrenome = gets();
+const id = gets();
+
+console.log(`Nome: ${nome} ${sobrenome} ID: ${id}`);
+
+
+//TODO: Print no console as três variáveis de acordo com a saída esperada
