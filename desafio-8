@@ -1,0 +1,35 @@
+//Desafios JavaScript na DIO têm funções "gets" e "print" acessíveis globalmente:
+//- "gets" : lê UMA linha com dado(s) de entrada (inputs) do usuário;
+//- "print": imprime um texto de saída (output), pulando linha.
+
+let lista1 = gets().split(', ');
+let lista2 = gets().split(', ');
+let lista3 = gets().split(', ')
+
+let arr = [lista1, lista2, lista3]
+
+let qualFiltro = false;
+let qualMolecula;
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    if (arr[i][j] === 'NO2' || arr[i][j] === 'SO2' || arr[i][j] === 'CO' || arr[i][j] === 'FHO') {
+      qualFiltro = true;
+      qualMolecula = arr[i][j];
+      break;
+    }
+  }
+  if (qualFiltro) {
+    break;
+  }
+}
+
+if (qualFiltro) {
+  console.log('Filtro Específico para a Molécula ' + qualMolecula);
+} else {
+  console.log('Filtro Simples');
+}
+
+
+//TODO: Print no console qual filtro deve ser utilizado de acordo com as moléculas prejudiciais
+//avaliadas no teste.
